@@ -191,6 +191,7 @@ remove_menu() {
 
 
 . "$SCRIPTS_DIR/system.sh"
+factory_backup
 check_root
 check_printer
 patch_stock_configs
