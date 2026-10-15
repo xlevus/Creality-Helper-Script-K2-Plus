@@ -120,7 +120,7 @@ handle_choice() {
         13) sh "$SCRIPTS_DIR/octoeverywhere.sh" install ;;
         14) sh "$SCRIPTS_DIR/mobileraker.sh" install ;;
         15) sh "$SCRIPTS_DIR/entware.sh" install ;;
-        16) sh "$SCRIPTS_DIR/git_backup.sh" install ;;j
+        16) sh "$SCRIPTS_DIR/git_backup.sh" install ;;
         17) sh "$SCRIPTS_DIR/hardware_r3men_bed.sh" install ;;
         18) sh "$SCRIPTS_DIR/hardware_dxc2.sh" install ;;
         19) remove_menu; main_menu; return ;;

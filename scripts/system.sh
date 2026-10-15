@@ -425,11 +425,11 @@ $include_line
 }
 
 factory_backup() {
-    BACKUP_ZIP=/mnt/UDISK/factory_config_backup.zip
+    BACKUP_ZIP="/mnt/UDISK/factory_config_backup_$(date -I).zip
     if [ -e $BACKUP_ZIP ]; then
         log_success "Factory Backup Exists at $BACKUP_ZIP"
     else
-        python -c "import shutil; shutil.make_archive('${BACKUP_ZIP%.*}', '${BACKUP_ZIP##*.}', root_dir='$CONFIG_DIR', base_dir='${CONFIG_DIR##*/}')"
+        python -c "import shutil; shutil.make_archive('${BACKUP_ZIP%.*}', '${BACKUP_ZIP##*.}', root_dir='${CONFIG_DIR%/*}', base_dir='${CONFIG_DIR##*/}')"
         log_info "Factory configuration backed up to $BACKUP_ZIP"
     fi
 }
