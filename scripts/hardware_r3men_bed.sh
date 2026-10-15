@@ -28,8 +28,8 @@ EOF
 
     add_include_to_printer_cfg "r3men_bed.cfg"
 
-    sed -i -e ':a' -e 'N' -e '$!ba' -e "s/sensor_type: $SESNOR_TYPE\nsensor_pin: $SENSOR_PIN/sensor_type: $TARGET_TYPE\nsensor_pin: $SENSOR_PIN/" "$PRINTER_CFG"
-    restart_klipper
+    echo sed -i -e ':a' -e 'N' -e '$!ba' -e "s/sensor_type: $SENSOR_TYPE\nsensor_pin: $SENSOR_PIN/sensor_type: $TARGET_TYPE\nsensor_pin: $SENSOR_PIN/" "$PRINTER_CFG"
+    #restart_klipper
 
     mark_installed "hardware_r3men_bed"
     echo ""
