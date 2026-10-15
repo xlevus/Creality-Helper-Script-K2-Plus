@@ -425,7 +425,7 @@ $include_line
 }
 
 factory_backup() {
-    BACKUP_ZIP="/mnt/UDISK/factory_config_backup_$(date -I).zip
+    BACKUP_ZIP="/mnt/UDISK/factory_config_backup_$(date -I).zip"
     if [ -e $BACKUP_ZIP ]; then
         log_success "Factory Backup Exists at $BACKUP_ZIP"
     else
